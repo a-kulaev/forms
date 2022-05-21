@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Global */
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+h2,
+h3 {
+    margin: 0;
+}
+
+h1 {
+    margin: 69px 0 0;
+    font-size: 30px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-transform: uppercase
+}
+
+h3 {
+    
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.input-text,
+.textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 130px;
+    max-height: 260px;
+    resize: vertical;
+}
+
+.input-text {
+
+}
+
+/* 01. проста форма */
+
+.form-simple {
+    width: 330px;
+}
+
+.form-simple input,
+.form-simple textarea,
+.form-simple select {
+    width: 100%;
+}
+
+/* 02. елементи */
+
+.form-elements form > div:not(:nth-child(3)) > input {
+    display: block;
+}
+
+
+/* 03. стилізовані чекбокси */
+
+.form-checkbox form {
+    display: flex;
+}
+
+.form-checkbox input {
+    display: block;
+}
+
+/* 04. форма таблицею */
+
+
+/* 05. форма таблицею */
+
+
+/* 06. фіксована форма */
