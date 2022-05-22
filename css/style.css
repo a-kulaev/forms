@@ -32,11 +32,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-h2,
-h3 {
-    margin: 0;
-}
-
 h1 {
     margin: 69px 0 0;
     font-size: 30px;
@@ -46,16 +41,23 @@ h1 {
     text-align: center;
 }
 
+h2,
+h3 {
+    margin: 0;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+
 h2 {
     font-size: 20px;
     color: #b3b3b3;
-    font-weight: 700;
-    font-family: "Roboto";
     text-transform: uppercase
 }
 
 h3 {
-    
+    font-size: 18px;
+    color: #1f222c;
 }
 
 .wrapper {
@@ -93,10 +95,13 @@ textarea {
 
 /* 02. елементи */
 
-.form-elements form > div:not(:nth-child(3)) > input {
-    display: block;
+.form-elements > form {
+    display: flex;
 }
 
+.form-elements > form > div:nth-child(3) > div:nth-child(1) > div {
+    display: inline-block;
+}
 
 /* 03. стилізовані чекбокси */
 
@@ -113,5 +118,27 @@ textarea {
 
 /* 05. форма таблицею */
 
+.form-table-2 {
+    width: 680px;
+}
+
+.form-table-2 form div {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* 06. фіксована форма */
+
+.form-fixed {
+    width: 309px;
+}
+
+.form-fixed form {
+    width: 260px;
+}
+
+.form-fixed .input-checkbox,
+.form-fixed .input-submit {
+    display: block;
+}
+
