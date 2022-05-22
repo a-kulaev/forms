@@ -50,6 +50,7 @@ h3 {
 
 
 h2 {
+    margin: 0 0 20px 0;
     font-size: 20px;
     color: #b3b3b3;
     text-transform: uppercase
@@ -58,6 +59,24 @@ h2 {
 h3 {
     font-size: 18px;
     color: #1f222c;
+}
+
+hr {
+    margin: 0;
+    border: none;
+    border-bottom: solid 1px #dcdcde;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    box-sizing: border-box;
+}
+
+.block {
+    margin: 45px 0 50px;
 }
 
 .wrapper {
@@ -77,8 +96,24 @@ textarea {
     resize: vertical;
 }
 
-.input-text {
+.input-text,
+.input-select,
+.textarea {
+    margin: 5px 5px 5px 0;
+    padding: 11px 14px 10px 14px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+}
 
+.input-submit {
+    margin-top: 1px;
+    padding: 13.5px 15px 13.5px 15px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    background-color: #12d661;
+    border-radius: 3px;
 }
 
 /* 01. проста форма */
@@ -114,6 +149,11 @@ textarea {
 }
 
 /* 04. форма таблицею */
+
+.form-table-1 {
+    width: 500px;
+}
+
 
 
 /* 05. форма таблицею */
