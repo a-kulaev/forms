@@ -12,29 +12,28 @@
         <section>
             <div class="wrapper">
                 <h1>Форми</h1>
-                <div class="form-simple block">
+                <div class="form-simple-1 block">
                     <h2>01. проста форма</h2>
                     <form action="index.html" method="post">
-                        <input type="text" class="input-text" placeholder="Введіть ім’я">
-                        <input type="text" class="input-text" placeholder="Email">
-                        <select class="input-select">
-                            <option selected>Ваше місто</option>
+                        <input type="text" name="name" maxlength="30" class="input-text" placeholder="Введіть ім’я">
+                        <input type="text" name="email" maxlength="30" required class="input-text" placeholder="Email">
+                        <select name="city-select" class="select">
+                            <option selected disabled>Ваше місто</option>
                             <option>Київ</option>
                             <option>Львів</option>
                             <option>Хмельницький</option>
                         </select>
-                        <textarea class="textarea" placeholder="Email">
-                        </textarea>
+                        <textarea class="textarea" name="textarea" placeholder="Введіть ваше повідомлення"></textarea>
                         <input type="submit" value="Зареєструватися" class="input-submit">
                     </form>
                 </div>
                 <hr>
-                <div class="form-elements block">
+                <div class="form-elements-2 block">
                     <h2>02. елементи</h2>
                     <form action="index.html" method="post">
                         <div>
                             <div class="radio-nova_poshta">
-                                <input type="radio" name="delivery" class="input-radio" id="poshta">
+                                <input type="radio" name="delivery" checked class="input-radio" id="poshta">
                                 <label for="poshta">Нова Пошта</label>
                             </div>
                             <div class="radio-courier">
@@ -42,7 +41,7 @@
                                 <label for="courier">Кур’єр</label>
                             </div>
                             <div class="radio-self">
-                                <input type="radio" name="delivery" class="input-radio" id="self">
+                                <input type="radio" name="delivery" disabled class="input-radio" id="self">
                                 <label for="self">Самовивіз</label>
                             </div>
                         </div>
@@ -56,7 +55,7 @@
                                 <label for="agree">Згідний з ПДВ 9%</label>
                             </div>
                             <div>
-                                <input type="checkbox" class="input-checkbox" id="receive">
+                                <input type="checkbox" disabled class="input-checkbox" id="receive">
                                 <label for="receive">Отримувати новини на ел. пошту</label>
                             </div>
                         </div>
@@ -84,12 +83,12 @@
                     </form>
                 </div>
                 <hr>
-                <div class="form-checkbox block">
+                <div class="form-checkbox-3 block">
                     <h2>03. стилізовані чекбокси</h2>
                     <form action="index.html" method="post">
                         <div>
-                            <input type="radio" name="gender" class="input-man">
-                            <input type="radio" name="gender" class="input-woman">
+                            <input type="radio" name="gender-styled" checked class="input-radio-styled">
+                            <input type="radio" name="gender-styled" class="input-radio-styled">
                         </div>
                         <div>
                             <input type="checkbox" class="input-checkbox-slyled">
@@ -106,23 +105,22 @@
                             <tr>
                                 <td>ФІО:</td>
                                 <td>
-                                    <input type="text" placeholder="Введіть ім’я" class="input-text">
+                                    <input type="text" maxlength="30" placeholder="Введіть ім’я" class="input-text">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Пароль:</td>
                                 <td>
-                                    <input type="text" placeholder="Введіть не менше 6 символів" class="input-text">
+                                    <input type="text" maxlength="30" placeholder="Введіть не менше 6 символів" class="input-text">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Місто:</td>
                                 <td>
                                     <select>
-                                        <option>Ваше місто</option>
                                         <option>Київ</option>
-                                        <option>Хмельницький</option>
-                                        <option>Інше місто</option>
+                                        <option>Львів</option>
+                                        <option selected>Хмельницький</option>
                                     </select>
                                 </td>
                             </tr>
@@ -140,8 +138,7 @@
                             <tr>
                                 <td rowspan="2">Коментарій:</td>
                                 <td>
-                                    <textarea class="textarea" placeholder="Введіть текст повідомлення">
-                                    </textarea>
+                                    <textarea class="textarea" placeholder="Введіть текст повідомлення"></textarea>
                                 </td>
                             </tr>
                             <tr>
@@ -151,7 +148,7 @@
                     </form>
                 </div>
                 <hr>
-                <div class="form-table-2 block">
+                <div class="form-table-5 block">
                     <h2>05. форма таблицею</h2>
                     <h3>Оформлення заявки</h3>
                     <form action="index.html" method="post">
@@ -162,9 +159,9 @@
                                 <td>Телефон</td>
                             </tr>
                             <tr>
-                                <td><input type="text" value="Василь Вірастюк" class="input-text"></td>
-                                <td><input type="text" class="input-text"></td>
-                                <td><input type="text" class="input-text"></td>
+                                <td><input type="text" value="Василь Вірастюк" maxlength="30" class="input-text"></td>
+                                <td><input type="text" maxlength="30" class="input-text"></td>
+                                <td><input type="text" maxlength="30" class="input-text"></td>
                             </tr>
                         </table>
                         <hr>
@@ -175,14 +172,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <select>
-                                        <option>Ваше місто</option>
-                                        <option>Київ</option>
-                                        <option>Хмельницький</option>
-                                        <option>Інше місто</option> 
+                                    <select class="select">
+                                        <option>Україна</option>
+                                        <option>Польща</option>
+                                        <option selected>Індонезія</option>
                                     </select>
                                 </td>
-                                <td colspan="2"><input type="text" class="input-text"></td>
+                                <td colspan="2"><input type="text" maxlength="30" class="input-text"></td>
                             </tr>
                             <tr>
                                 <td>Місто</td>
@@ -191,13 +187,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="input-text">
+                                    <input type="text" maxlength="30" class="input-text">
                                 </td>
                                 <td>
-                                    <input type="text" class="input-text">
+                                    <input type="text" maxlength="30" class="input-text">
                                 </td>
                                 <td>
-                                    <input type="text" class="input-text">
+                                    <input type="text" maxlength="30" class="input-text">
                                 </td>
                             </tr>
                             <tr>
@@ -213,11 +209,11 @@
                         </div>
                     </form>
                 </div>
-                <div class="form-fixed">
+                <div class="form-fixed-6">
                     <form action="index.html" method="post">
                         <h2>06. фіксована форма</h2>
-                        <input type="text" class="input-text">
-                        <input type="text" class="input-text">
+                        <input type="text" maxlength="30" class="input-text">
+                        <input type="text" maxlength="30" class="input-text">
                         <a href="index.html">Забули пароль?</a>
                         <input type="checkbox" class="input-checkbox">
                         <input type="submit" value="Увійти" class="input-submit">

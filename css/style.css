@@ -30,6 +30,7 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
+    font-size: 14px;
 }
 
 h1 {
@@ -45,7 +46,6 @@ h2,
 h3 {
     margin: 0;
     font-weight: 700;
-    font-family: "Roboto";
 }
 
 
@@ -75,6 +75,12 @@ td {
     box-sizing: border-box;
 }
 
+textarea {
+    min-height: 130px;
+    max-height: 260px;
+    resize: vertical;
+}
+
 .block {
     margin: 45px 0 50px;
 }
@@ -84,25 +90,37 @@ td {
     max-width: 960px;
 }
 
-.input-text,
-.textarea {
-    width: 100%;
-    box-sizing: border-box;
-}
 
-textarea {
-    min-height: 130px;
-    max-height: 260px;
-    resize: vertical;
-}
 
 .input-text,
-.input-select,
+.select,
 .textarea {
     margin: 5px 5px 5px 0;
-    padding: 11px 14px 10px 14px;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
     border: solid 1px #ccc;
     border-radius: 3px;
+}
+
+.input-text::-webkit-input-placeholder,
+.select::-webkit-input-placeholder,
+.textarea::-webkit-input-placeholder {
+    color: #b3b3b3;
+}
+
+.input-text,
+.textarea,
+.select {
+    padding: 12px 15px 10px 15px;
+}
+
+.select {
+    padding: 12px 15px 10px 11px;
 }
 
 .input-submit {
@@ -116,69 +134,94 @@ textarea {
     border-radius: 3px;
 }
 
+.input-submit:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+    background-color: #07be51;
+}
+
+.input-text:focus,
+.textarea:focus,
+.select:focus {
+    outline: none;
+    border: 1px solid #3e6aff;
+    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+}
+
+.select {
+    appearance: none;
+}
+
 /* 01. проста форма */
 
-.form-simple {
+.form-simple-1 {
     width: 330px;
 }
 
-.form-simple input,
-.form-simple textarea,
-.form-simple select {
+.form-simple-1 .input-submit {
     width: 100%;
+}
+
+.form-simple-1 .select option:first-child {
+    display: none;
 }
 
 /* 02. елементи */
 
-.form-elements > form {
+.form-elements-2 > form {
     display: flex;
 }
 
-.form-elements > form > div:nth-child(3) > div:nth-child(1) > div {
+.form-elements-2 > form > div:nth-child(3) > div:nth-child(1) > div {
     display: inline-block;
 }
 
 /* 03. стилізовані чекбокси */
 
-.form-checkbox form {
+.form-checkbox-3 form {
     display: flex;
 }
 
-.form-checkbox input {
+.form-checkbox-3 input {
     display: block;
 }
 
 /* 04. форма таблицею */
 
-.form-table-1 {
+.form-table-4 {
     width: 500px;
 }
 
-
+.form-table-4 .input-submit {
+    width: 100%;
+}
 
 /* 05. форма таблицею */
 
-.form-table-2 {
+.form-table-5 {
     width: 680px;
 }
 
-.form-table-2 form div {
+.form-table-5 form div {
     display: flex;
     justify-content: space-between;
 }
 
 /* 06. фіксована форма */
 
-.form-fixed {
+.form-fixed-6 {
     width: 309px;
 }
 
-.form-fixed form {
+.form-fixed-6 form {
     width: 260px;
 }
 
-.form-fixed .input-checkbox,
-.form-fixed .input-submit {
+.form-fixed-6 .input-checkbox,
+.form-fixed-6 .input-submit {
     display: block;
+}
+
+.form-fixed-6 .input-submit {
+    width: 100%;
 }
 
