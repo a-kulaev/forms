@@ -151,6 +151,110 @@ textarea {
     appearance: none;
 }
 
+.input-checkbox,
+.input-radio,
+.input-checkbox-slyled,
+.input-radio-styled {
+    display: none;
+}
+
+.input-radio + label,
+.input-checkbox + label {
+    position: relative;
+    padding: 0 25px;
+}
+
+.input-radio:disabled + label,
+.input-checkbox:disabled + label {
+    color: #b3b3b3;
+}
+
+.input-radio + label::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid #3e6aff;
+}
+
+.input-radio:disabled + label::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
+.input-radio:checked + label::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 4px;
+    top: 4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+    background-color: #3e6aff;
+}
+
+.input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.input-checkbox:checked + label::before {
+    border: 1px solid #3e6aff;
+}
+
+.input-checkbox:disabled + label::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
+.input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 5px;
+    top: 4px;
+    width: 7px;
+    height: 5px;
+    transform: rotate(-45deg);
+    border-left: 2px solid #244dd7;
+    border-bottom: 2px solid #244dd7;
+}
+
+.input-radio:checked + label,
+.input-checkbox:checked + label {
+
+}
+
 /* 01. проста форма */
 
 .form-simple-1 {
@@ -169,10 +273,49 @@ textarea {
 
 .form-elements-2 > form {
     display: flex;
+    justify-content: space-between;
 }
 
 .form-elements-2 > form > div:nth-child(3) > div:nth-child(1) > div {
     display: inline-block;
+}
+
+.radio-nova_poshta,
+.radio-courier,
+.checkbox-read,
+.checkbox-agree {
+    margin-bottom: 10px;
+}
+
+.form-elements-2 .status-date {
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
+.status-date > div:first-child {
+    padding: 20px 20px 0 20px;
+}
+
+.status-date > div:last-child {
+    padding: 15px 20px 20px 20px;
+}
+
+.status-date > div:first-child > div:last-child > label {
+    padding-right: 0;
+}
+
+.status-date span {
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.status-date > div:first-child > span {
+    padding-right: 31px;
+}
+
+.status-date > div:last-child > span {
+    padding-right: 42px;
 }
 
 /* 03. стилізовані чекбокси */
@@ -181,7 +324,7 @@ textarea {
     display: flex;
 }
 
-.form-checkbox-3 input {
+.form-checkbox-3 > div > div {
     display: block;
 }
 

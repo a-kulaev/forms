@@ -46,38 +46,41 @@
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div class="checkbox-read">
                                 <input type="checkbox" class="input-checkbox" id="read">
                                 <label for="read">Прочитав умови договору</label>
                             </div>
-                            <div>
+                            <div class="checkbox-agree">
                                 <input type="checkbox" class="input-checkbox" id="agree">
                                 <label for="agree">Згідний з ПДВ 9%</label>
                             </div>
-                            <div>
+                            <div class="checkbox-receive">
                                 <input type="checkbox" disabled class="input-checkbox" id="receive">
                                 <label for="receive">Отримувати новини на ел. пошту</label>
                             </div>
                         </div>
-                        <div>
+                        <div class="status-date">
                             <div>
                                 <span>Статус</span>
                                 <div>
-                                    <input type="checkbox" class="input-checkbox">
-                                    <label for="checkbox-receive">Новинки</label>
+                                    <input type="checkbox" class="input-checkbox" id="news">
+                                    <label for="news">Новинки</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" class="input-checkbox">
-                                    <label for="checkbox-receive">Акційні товари</label>
+                                    <input type="checkbox" class="input-checkbox" id="discount">
+                                    <label for="discount">Акційні товари</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" class="input-checkbox">
-                                    <label for="checkbox-receive">Розпродаж</label>
+                                    <input type="checkbox" class="input-checkbox" id="sale">
+                                    <label for="sale">Розпродаж</label>
                                 </div>
                             </div>
                             <div>
                                 <span>Дата</span>
-                                <input type="date" class="input-date">
+                                <div>
+                                    <input type="date" class="input-date" id="date">
+                                    <label for="date"></label>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -87,17 +90,23 @@
                     <h2>03. стилізовані чекбокси</h2>
                     <form action="index.html" method="post">
                         <div>
-                            <input type="radio" name="gender-styled" checked class="input-radio-styled">
-                            <input type="radio" name="gender-styled" class="input-radio-styled">
+                            <div>
+                                <input type="radio" name="gender-styled" checked class="input-radio-styled" id="manstyled">
+                                <label for="manstyled">Чоловік</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="gender-styled" class="input-radio-styled" id="womanstyled">
+                                <label for="womanstyled">Жінка</label>
+                            </div>
                         </div>
                         <div>
-                            <input type="checkbox" class="input-checkbox-slyled">
-                            <input type="checkbox" class="input-checkbox-slyled">
+                            <div><input type="checkbox" class="input-checkbox-slyled"></div>
+                            <div><input type="checkbox" class="input-checkbox-slyled"></div>
                         </div>
                     </form>
                 </div>
                 <hr>
-                <div class="form-table-1 block">
+                <div class="form-table-4 block">
                     <h2>04. форма таблицею</h2>
                     <h3>Заповніть усі необхідні поля</h3>
                     <form action="index.html" method="post">
@@ -117,7 +126,7 @@
                             <tr>
                                 <td>Місто:</td>
                                 <td>
-                                    <select>
+                                    <select class="select">
                                         <option>Київ</option>
                                         <option>Львів</option>
                                         <option selected>Хмельницький</option>
