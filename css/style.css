@@ -359,8 +359,23 @@ textarea {
     display: flex;
 }
 
-.form-checkbox-3 > div > div {
+.input-radio-styled + label {
+    position: relative;
+    padding: 30px 30px 30px 85px;
     display: block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.input-radio-styled + label::before{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0;
+    top: 0;
+    border-radius: 35px;
+    background-color: black;
 }
 
 /* 04. форма таблицею */
