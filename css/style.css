@@ -90,9 +90,8 @@ textarea {
     max-width: 960px;
 }
 
-
-
 .input-text,
+.input-date,
 .select,
 .textarea {
     margin: 5px 5px 5px 0;
@@ -114,13 +113,16 @@ textarea {
 }
 
 .input-text,
-.textarea,
-.select {
+.textarea {
     padding: 12px 15px 10px 15px;
 }
 
 .select {
-    padding: 12px 15px 10px 11px;
+    padding: 13px 15px 11px 15px;
+}
+
+.input-date {
+    padding: 11px 15px 9px 15px
 }
 
 .input-submit {
@@ -132,23 +134,48 @@ textarea {
     border: none;
     background-color: #12d661;
     border-radius: 3px;
+    transition: all .5s ease;
 }
 
 .input-submit:hover {
-    filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
+    box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
     background-color: #07be51;
 }
 
 .input-text:focus,
+.input-date:focus,
 .textarea:focus,
 .select:focus {
     outline: none;
     border: 1px solid #3e6aff;
-    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    box-shadow: 0 0 2.5px rgba(62,106,255,0.55);
 }
 
 .select {
     appearance: none;
+    -webkit-appearance: none;
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+}
+
+.label-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    transition: all .5s ease;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.label-select::before {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 24px;
+    z-index: 0;
+    border: 4.5px solid transparent;
+    border-top-color: #1f222c;
 }
 
 .input-checkbox,
@@ -250,11 +277,6 @@ textarea {
     border-bottom: 2px solid #244dd7;
 }
 
-.input-radio:checked + label,
-.input-checkbox:checked + label {
-
-}
-
 /* 01. проста форма */
 
 .form-simple-1 {
@@ -280,6 +302,10 @@ textarea {
     display: inline-block;
 }
 
+.form-elements-2 > h2 {
+    margin-bottom: 36px;
+}
+
 .radio-nova_poshta,
 .radio-courier,
 .checkbox-read,
@@ -298,7 +324,11 @@ textarea {
 }
 
 .status-date > div:last-child {
-    padding: 15px 20px 20px 20px;
+    padding: 14px 20px 20px 20px;
+}
+
+.status-date > div:last-child > div {
+    display: inline-block;
 }
 
 .status-date > div:first-child > div:last-child > label {
@@ -316,6 +346,11 @@ textarea {
 
 .status-date > div:last-child > span {
     padding-right: 42px;
+}
+
+.input-date {
+    width: 148px;
+    margin: 0;
 }
 
 /* 03. стилізовані чекбокси */

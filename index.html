@@ -17,12 +17,14 @@
                     <form action="index.html" method="post">
                         <input type="text" name="name" maxlength="30" class="input-text" placeholder="Введіть ім’я">
                         <input type="text" name="email" maxlength="30" required class="input-text" placeholder="Email">
-                        <select name="city-select" class="select">
-                            <option selected disabled>Ваше місто</option>
-                            <option>Київ</option>
-                            <option>Львів</option>
-                            <option>Хмельницький</option>
-                        </select>
+                        <label class="label-select">
+                            <select name="city-select" class="select">
+                                <option selected disabled>Ваше місто</option>
+                                <option value="Київ">Київ</option>
+                                <option value="Львів">Львів</option>
+                                <option value="Хмельницький">Хмельницький</option>
+                            </select>
+                        </label>
                         <textarea class="textarea" name="textarea" placeholder="Введіть ваше повідомлення"></textarea>
                         <input type="submit" value="Зареєструватися" class="input-submit">
                     </form>
@@ -126,11 +128,13 @@
                             <tr>
                                 <td>Місто:</td>
                                 <td>
-                                    <select class="select">
-                                        <option>Київ</option>
-                                        <option>Львів</option>
-                                        <option selected>Хмельницький</option>
-                                    </select>
+                                    <label class="label-select">
+                                        <select name="city-select" class="select">
+                                            <option value="Київ">Київ</option>
+                                            <option value="Львів">Львів</option>
+                                            <option value="Хмельницький" selected>Хмельницький</option>
+                                        </select>
+                                    </label>
                                 </td>
                             </tr>
                             <tr>
@@ -181,11 +185,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <select class="select">
-                                        <option>Україна</option>
-                                        <option>Польща</option>
-                                        <option selected>Індонезія</option>
-                                    </select>
+                                    <label class="label-select">
+                                        <select name="country-select" class="select">
+                                            <option value="Україна">Україна</option>
+                                            <option value="Польща">Польща</option>
+                                            <option value="Індонезія" selected>Індонезія</option>
+                                        </select>
+                                    </label>
                                 </td>
                                 <td colspan="2"><input type="text" maxlength="30" class="input-text"></td>
                             </tr>
