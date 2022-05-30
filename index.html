@@ -91,19 +91,29 @@
                 <div class="form-checkbox-3 block">
                     <h2>03. стилізовані чекбокси</h2>
                     <form action="index.html" method="post">
-                        <div>
+                        <div class="gender-styled">
                             <div>
-                                <input type="radio" name="gender-styled" value="Чоловік" checked class="input-radio-styled" id="manstyled">
+                                <input type="radio" name="gender-styled" value="Чоловік" checked class="input-radio-styled man" id="manstyled">
                                 <label for="manstyled">Чоловік</label>
                             </div>
                             <div>
-                                <input type="radio" name="gender-styled" value="Жінка" class="input-radio-styled" id="womanstyled">
+                                <input type="radio" name="gender-styled" value="Жінка" class="input-radio-styled woman" id="womanstyled">
                                 <label for="womanstyled">Жінка</label>
                             </div>
                         </div>
-                        <div>
-                            <div><input type="checkbox" class="input-checkbox-slyled"></div>
-                            <div><input type="checkbox" class="input-checkbox-slyled"></div>
+                        <div class="checkbox-styled">
+                            <div>
+                                <input type="checkbox" name="news-styled" value="Отримувати новини" class="input-checkbox-slyled" id="getnews">
+                                <label for="getnews">Отримувати новини</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="shop-styled" value="Купити додому ковбаси" class="input-checkbox-slyled" id="shop">
+                                <label for="shop">Купити додому ковбаси</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="light-styled" value="Включити світло" class="input-checkbox-slyled" id="light">
+                                <label for="light">Включити світло</label>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -122,7 +132,7 @@
                             <tr>
                                 <td>Пароль:</td>
                                 <td>
-                                    <input type="text" maxlength="30" placeholder="Введіть не менше 6 символів" class="input-text">
+                                    <input type="password" maxlength="30" placeholder="Введіть не менше 6 символів" class="input-text">
                                 </td>
                             </tr>
                             <tr>
@@ -137,18 +147,23 @@
                                     </label>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="tr-gender">
                                 <td>Стать:</td>
                                 <td>
-                                    <input type="checkbox">
-                                    <input type="checkbox">
+                                    <input type="radio" name="table-gender" class="input-radio" id="genderman" selected>
+                                    <label for="genderman">Чоловік</label>
+                                    <input type="radio" name="table-gender" class="input-radio" id="genderwoman">
+                                    <label for="genderwoman">Чоловік</label>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr class="tr-photo">
                                 <td>Фото:</td>
-                                <td><input type="file" class="input-file"></td>
+                                <td>
+                                    <input type="file" class="input-file" id="upload">
+                                    <label for="upload">Виберіть файл</label>
+                                </td>
                             </tr>
-                            <tr>
+                            <tr class="tr-comment">
                                 <td rowspan="2">Коментарій:</td>
                                 <td>
                                     <textarea class="textarea" placeholder="Введіть текст повідомлення"></textarea>
@@ -166,7 +181,7 @@
                     <h3>Оформлення заявки</h3>
                     <form action="index.html" method="post">
                         <table>
-                            <tr>
+                            <tr class="tr-headline">
                                 <td>Прізвище та ім’я</td>
                                 <td>Ел. пошта</td>
                                 <td>Телефон</td>
@@ -177,9 +192,9 @@
                                 <td><input type="text" maxlength="30" class="input-text"></td>
                             </tr>
                         </table>
-                        <hr>
+                        <hr class="hr-1">
                         <table>
-                            <tr>
+                            <tr class="tr-headline">
                                 <td>Країна</td>
                                 <td colspan="2">Адреса</td>
                             </tr>
@@ -195,7 +210,7 @@
                                 </td>
                                 <td colspan="2"><input type="text" maxlength="30" class="input-text"></td>
                             </tr>
-                            <tr>
+                            <tr class="tr-headline">
                                 <td>Місто</td>
                                 <td>Будинок</td>
                                 <td>Поштовий індекс</td>
@@ -217,21 +232,30 @@
                                 </td>
                             </tr>
                         </table>
-                        <hr>
-                        <div>
+                        <div class="table-agree">
+                            <input type="checkbox" name="table-agree" value="Згода" class="input-checkbox" id="tableagree">
+                            <label for="tableagree">Я погоджуюсь з правилами оплати та доставки товару</label>
+                        </div>
+                        <hr class="hr-2">
+                        <div class="reset-submit">
                             <input type="reset" value="Повернутися назад" class="input-reset">
                             <input type="submit" value="Оформити покупку" class="input-submit">
                         </div>
                     </form>
                 </div>
                 <div class="form-fixed-6">
+                    <h2>06. фіксована форма</h2>
                     <form action="index.html" method="post">
-                        <h2>06. фіксована форма</h2>
-                        <input type="text" maxlength="30" class="input-text">
-                        <input type="text" maxlength="30" class="input-text">
-                        <a href="index.html">Забули пароль?</a>
-                        <input type="checkbox" class="input-checkbox">
-                        <input type="submit" value="Увійти" class="input-submit">
+                        <div>
+                            <span class="tr-headline">Логін</span>
+                            <input type="text" maxlength="30" class="input-text">
+                            <span class="tr-headline">Пароль</span>
+                            <input type="password" maxlength="30" class="input-text">
+                            <a href="index.html">Забули пароль?</a>
+                            <input type="pasword" name="fixed-pasword" value="Запам’ятати пароль" class="input-checkbox" id="remember">
+                            <label for="remember">Запам’ятати пароль</label>
+                            <input type="submit" value="Увійти" class="input-submit">
+                        </div>
                     </form>
                 </div>
             </div>

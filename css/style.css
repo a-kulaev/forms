@@ -73,6 +73,7 @@ table {
 
 td {
     box-sizing: border-box;
+    padding: 1.5px;
 }
 
 textarea {
@@ -88,6 +89,7 @@ textarea {
 .wrapper {
     margin: 0 auto;
     max-width: 960px;
+    position: relative;
 }
 
 .input-text,
@@ -205,7 +207,11 @@ textarea {
     width: 15px;
     height: 15px;
     border-radius: 15px;
-    background-color: #ffffff;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.input-radio:checked + label::before {
     border: 1px solid #3e6aff;
 }
 
@@ -243,8 +249,8 @@ textarea {
     width: 16px;
     height: 16px;
     border-radius: 3px;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
 
 .input-checkbox:checked + label::before {
@@ -357,15 +363,29 @@ textarea {
 
 .form-checkbox-3 form {
     display: flex;
+    gap: 270px;
+}
+
+.form-checkbox-3 > h2 {
+    margin-bottom: 27px;
 }
 
 .input-radio-styled + label {
     position: relative;
-    padding: 30px 30px 30px 85px;
+    padding: 26px 30px 26px 85px;
     display: block;
     font-size: 16px;
     font-weight: 700;
 }
+
+.input-radio-styled:hover + label {
+    color: #3e6aff;
+}
+
+.input-radio-styled:checked + label {
+    color: #3e6aff;
+}
+
 
 .input-radio-styled + label::before{
     content: "";
@@ -373,9 +393,84 @@ textarea {
     width: 70px;
     height: 70px;
     left: 0;
-    top: 0;
+    top: -1px;
     border-radius: 35px;
-    background-color: black;
+}
+
+.input-radio-styled.man + label::before {
+    background-image: url(../img/man.png);
+}
+
+.input-radio-styled.man:hover + label::before {
+    background-image: url(../img/man-checked.png);
+}
+
+.input-radio-styled.man:checked + label::before {
+    background-image: url(../img/man-checked.png);
+}
+
+.input-radio-styled.woman + label::before {
+    background-image: url(../img/woman.png);
+}
+
+.input-radio-styled.woman:hover + label::before {
+    background-image: url(../img/woman-checked.png);
+}
+
+.input-radio-styled.woman:checked + label::before {
+    background-image: url(../img/woman-checked.png);
+}
+
+.gender-styled {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.checkbox-styled {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.input-checkbox-slyled + label {
+    position: relative;
+    display: block;
+    padding: 6px 0 6px 64px;
+}
+
+.input-checkbox-slyled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 45px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #cfcfd1;
+    transition: all .5s ease;
+}
+
+.input-checkbox-slyled:checked + label::before {
+    background-color: #3e6aff;
+}
+
+.input-checkbox-slyled + label::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    width: 21px;
+    height: 21px;
+    border-radius: 11px;
+    background-color: #fff;
+    transition: all .5s ease;
+}
+
+.input-checkbox-slyled:checked + label::after {
+    left: 22px;
+    filter: drop-shadow(0 0 2.5px rgba(0,0,0,0.5));
 }
 
 /* 04. форма таблицею */
@@ -384,14 +479,71 @@ textarea {
     width: 500px;
 }
 
+.form-table-4.block {
+    margin-bottom: 47px;
+}
+
+.form-table-4 h2 {
+    margin-bottom: 29px;
+}
+
+.form-table-4 h3 {
+    margin-bottom: 17px;
+}
+
 .form-table-4 .input-submit {
     width: 100%;
+}
+
+.tr-comment > td:first-child {
+    padding-top: 20px;
+    vertical-align: top;
+}
+
+.tr-gender > td:last-child {
+    padding: 11.5px 0 10.5px;
+}
+
+.tr-photo > td:first-child {
+    vertical-align: top;
+    padding: 18px 0 23px;
+}
+
+.tr-photo > td:last-child {
+    padding-top: 6px;
+    vertical-align: top;
+}
+
+.input-file {
+    display: none;
+}
+
+.input-file + label {
+    display: inline-block;
+    padding: 13px 36px 11px 36px;
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    background-color: #3e6aff;
 }
 
 /* 05. форма таблицею */
 
 .form-table-5 {
     width: 680px;
+    border-collapse: collapse;
+}
+
+.form-table-5 h2 {
+    margin-bottom: 28px;
+}
+
+.form-table-5 h3 {
+    margin-bottom: 17px;
+}
+
+.form-table-5 td {
+    padding: 0;
 }
 
 .form-table-5 form div {
@@ -399,14 +551,85 @@ textarea {
     justify-content: space-between;
 }
 
+.form-table-5 tr > td:first-child {
+    padding-right: 4px;
+}
+
+.form-table-5 tr > td:nth-child(2) {
+    padding: 0 4px 0;
+}
+
+.form-table-5 tr > td:last-child {
+    padding: 0 0 0 4px;
+}
+
+.form-table-5 .hr-1 {
+    margin: 23px 0 20px 0;
+}
+
+.form-table-5 .hr-2 {
+    margin: 23px 0 30px 0;
+}
+
+.form-table-5 .label-select::after {
+    content: "";
+    position: absolute;
+    right: 36px;
+    top: 16px;
+    width: 1px;
+    height: 19px;
+    background-color: #ccc
+}
+
+.tr-headline {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+.tr-headline > td {
+    padding-bottom: 0px;
+}
+
+.table-agree {
+    margin-top: 17px;
+}
+
+.input-reset {
+    padding: 13px 25px 12px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #85868d;
+    font-size: 14px;
+    color: #6e6f77;
+    font-weight: 700;
+    }
+
+.reset-submit {
+    margin-bottom: 50px;
+}
+
 /* 06. фіксована форма */
 
 .form-fixed-6 {
+    content: "";
+    position: fixed;
     width: 309px;
+    top: 0;
+    right: 0;
 }
 
 .form-fixed-6 form {
+    background-color: #fff;
+    box-shadow: 0px 5px 6px rgba(0,0,0,0.15);
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+
+.form-fixed-6 form > div {
     width: 260px;
+    padding: 21px 24px 20px 24px;
+    border-radius: 5px;
 }
 
 .form-fixed-6 .input-checkbox,
@@ -416,5 +639,25 @@ textarea {
 
 .form-fixed-6 .input-submit {
     width: 100%;
+}
+
+.form-fixed-6 a {
+    display: block;
+    padding: 5px 0 13px;
+    text-decoration: none;
+    color: #3e6aff;
+    font-size: 13px;
+}
+
+.form-fixed-6 a:hover {
+    text-decoration: underline;
+}
+
+.form-fixed-6 .input-checkbox {
+    display: none;
+}
+
+.form-fixed-6 .input-submit {
+    margin: 15px 0 0 0;
 }
 
