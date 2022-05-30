@@ -16,7 +16,7 @@
                     <h2>01. проста форма</h2>
                     <form action="index.html" method="post">
                         <input type="text" name="name" maxlength="30" class="input-text" placeholder="Введіть ім’я">
-                        <input type="text" name="email" maxlength="30" required class="input-text" placeholder="Email">
+                        <input type="email" name="email" maxlength="30" required class="input-text" placeholder="Email">
                         <label class="label-select">
                             <select name="city-select" class="select">
                                 <option selected disabled>Ваше місто</option>
@@ -150,7 +150,7 @@
                             <tr class="tr-gender">
                                 <td>Стать:</td>
                                 <td>
-                                    <input type="radio" name="table-gender" class="input-radio" id="genderman" selected>
+                                    <input type="radio" name="table-gender" class="input-radio" id="genderman" checked>
                                     <label for="genderman">Чоловік</label>
                                     <input type="radio" name="table-gender" class="input-radio" id="genderwoman">
                                     <label for="genderwoman">Чоловік</label>
@@ -188,8 +188,8 @@
                             </tr>
                             <tr>
                                 <td><input type="text" value="Василь Вірастюк" maxlength="30" class="input-text"></td>
-                                <td><input type="text" maxlength="30" class="input-text"></td>
-                                <td><input type="text" maxlength="30" class="input-text"></td>
+                                <td><input type="email" maxlength="30" class="input-text"></td>
+                                <td><input type="tel" maxlength="30" class="input-text"></td>
                             </tr>
                         </table>
                         <hr class="hr-1">
@@ -244,19 +244,24 @@
                     </form>
                 </div>
                 <div class="form-fixed-6">
-                    <h2>06. фіксована форма</h2>
-                    <form action="index.html" method="post">
-                        <div>
-                            <span class="tr-headline">Логін</span>
-                            <input type="text" maxlength="30" class="input-text">
-                            <span class="tr-headline">Пароль</span>
-                            <input type="password" maxlength="30" class="input-text">
-                            <a href="index.html">Забули пароль?</a>
-                            <input type="pasword" name="fixed-pasword" value="Запам’ятати пароль" class="input-checkbox" id="remember">
-                            <label for="remember">Запам’ятати пароль</label>
-                            <input type="submit" value="Увійти" class="input-submit">
+                    <input type="checkbox" name="close-checkbox" value="close" class="close-checkbox" id="close">
+                    <label for="close">
+                        <div class="please-close">
+                            <h2>06. фіксована форма</h2>
+                            <form action="index.html" method="post">
+                                <div>
+                                    <span class="tr-headline">Логін</span>
+                                    <input type="text" maxlength="30" class="input-text">
+                                    <span class="tr-headline">Пароль</span>
+                                    <input type="password" maxlength="30" class="input-text">
+                                    <a href="index.html">Забули пароль?</a>
+                                    <input type="checkbox" name="fixed-pasword" value="Запам’ятати пароль" class="input-checkbox" id="remember">
+                                    <label for="remember">Запам’ятати пароль</label>
+                                    <input type="submit" value="Увійти" class="input-submit">
+                                </div>
+                            </form>
                         </div>
-                    </form>
+                    </label>
                 </div>
             </div>
         </section>
