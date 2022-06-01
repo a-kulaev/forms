@@ -685,6 +685,10 @@ textarea {
     display: block;
 }
 
+.mar {
+    margin-bottom: 9px;
+}
+
 .form-fixed-6 .input-submit {
     width: 100%;
 }
