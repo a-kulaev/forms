@@ -135,14 +135,15 @@ textarea {
     padding: 13px 14px 11px 14px;
 } */
 
+
 .input-date {
     padding: 11px 15px 9px 15px
 }
 
 .input-submit {
     margin-top: 1px;
-    padding: 13px 15px 13px 15px;
-    font-size: 13px;
+    padding: 14px 15px 13px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: 700;
     border: none;
@@ -155,6 +156,26 @@ textarea {
     box-shadow: 0px 2px 2.5px rgba(8,118,52,0.35);
     background-color: #07be51;
     cursor: pointer;
+}
+
+.input-reset {
+    padding: 14px 15px 13px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #85868d;
+    font-size: 14px;
+    color: #6e6f77;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .5s ease;
+    width: 180px;
+    text-align: center;
+    }
+
+.input-reset:hover {
+    background-color: #85868d;
+    color: #fff;
 }
 
 .input-text:focus,
@@ -172,6 +193,7 @@ textarea {
     z-index: 1;
     position: relative;
     background-color: transparent;
+    height: 41px;
 }
 
 .label-select {
@@ -624,24 +646,7 @@ textarea {
     margin-top: 17px;
 }
 
-.input-reset {
-    padding: 13px 25px 12px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid #85868d;
-    font-size: 14px;
-    color: #6e6f77;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all .5s ease;
-    width: 180px;
-    }
 
-.input-reset:hover {
-    background-color: #85868d;
-    color: #fff;
-}
 
 .reset-submit {
     margin-bottom: 50px;
@@ -649,6 +654,7 @@ textarea {
 
 .reset-submit .input-submit {
     width: 180px;
+    text-align: center;
 }
 
 /* 06. фіксована форма */
