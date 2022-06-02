@@ -124,22 +124,22 @@
                     <form action="index.html" method="post">
                         <table>
                             <tr>
-                                <td>ФІО:</td>
+                                <td><label for="fio">ФІО:</label></td>
                                 <td>
-                                    <input type="text" maxlength="30" placeholder="Введіть ім’я" class="input-text">
+                                    <input type="text" maxlength="30" placeholder="Введіть ім’я" class="input-text" id="fio">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Пароль:</td>
+                                <td><label for="pas">Пароль:</label></td>
                                 <td>
-                                    <input type="password" maxlength="30" placeholder="Введіть не менше 6 символів" class="input-text">
+                                    <input type="password" maxlength="30" placeholder="Введіть не менше 6 символів" class="input-text" id="pas">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Місто:</td>
+                                <td><label for="misto">Місто:</label></td>
                                 <td>
                                     <label class="label-select">
-                                        <select name="4-city-select" class="select">
+                                        <select name="4-city-select" class="select" id="misto">
                                             <option value="Київ">Київ</option>
                                             <option value="Львів">Львів</option>
                                             <option value="Хмельницький" selected>Хмельницький</option>
@@ -148,25 +148,25 @@
                                 </td>
                             </tr>
                             <tr class="tr-gender">
-                                <td>Стать:</td>
+                                <td><label for="genderwoman">Стать:</label></td>
                                 <td>
                                     <input type="radio" name="4-gender" class="input-radio" id="genderman" checked>
                                     <label for="genderman">Чоловік</label>
                                     <input type="radio" name="4-gender" class="input-radio" id="genderwoman">
-                                    <label for="genderwoman">Чоловік</label>
+                                    <label for="genderwoman">Жінка</label>
                                 </td>
                             </tr>
                             <tr class="tr-photo">
-                                <td>Фото:</td>
+                                <td><label for="upload">Фото:</label></td>
                                 <td>
                                     <input type="file" class="input-file" id="upload">
                                     <label for="upload">Виберіть файл</label>
                                 </td>
                             </tr>
                             <tr class="tr-comment">
-                                <td rowspan="2">Коментарій:</td>
+                                <td rowspan="2"><label for="comment">Коментарій:</label></td>
                                 <td>
-                                    <textarea class="textarea" placeholder="Введіть текст повідомлення"></textarea>
+                                    <textarea class="textarea" placeholder="Введіть текст повідомлення" id="comment"></textarea>
                                 </td>
                             </tr>
                             <tr>
@@ -182,48 +182,48 @@
                     <form action="index.html" method="post">
                         <table>
                             <tr class="tr-headline">
-                                <td>Прізвище та ім’я</td>
-                                <td>Ел. пошта</td>
-                                <td>Телефон</td>
+                                <td><label for="prizv">Прізвище та ім’я</label></td>
+                                <td><label for="el">Ел. пошта</label></td>
+                                <td><label for="tel">Телефон</label></td>
                             </tr>
                             <tr>
-                                <td><input type="text" value="Василь Вірастюк" maxlength="30" class="input-text"></td>
-                                <td><input type="email" maxlength="30" class="input-text"></td>
-                                <td><input type="tel" maxlength="30" class="input-text"></td>
+                                <td><input type="text" value="Василь Вірастюк" maxlength="30" class="input-text" id="prizv"></td>
+                                <td><input type="email" maxlength="30" class="input-text" id="el"></td>
+                                <td><input type="tel" maxlength="30" class="input-text" id="tel"></td>
                             </tr>
                         </table>
                         <hr class="hr-1">
                         <table>
                             <tr class="tr-headline">
-                                <td>Країна</td>
-                                <td colspan="2">Адреса</td>
+                                <td><label for="krai">Країна</label></td>
+                                <td colspan="2"><label for="adr">Адреса</label></td>
                             </tr>
                             <tr>
                                 <td>
                                     <label class="label-select">
-                                        <select name="5-country-select" class="select">
+                                        <select name="5-country-select" class="select" id="krai">
                                             <option value="Україна">Україна</option>
                                             <option value="Польща">Польща</option>
                                             <option value="Індонезія" selected>Індонезія</option>
                                         </select>
                                     </label>
                                 </td>
-                                <td colspan="2"><input type="text" maxlength="30" class="input-text"></td>
+                                <td colspan="2"><input type="text" maxlength="30" class="input-text" id="adr"></td>
                             </tr>
                             <tr class="tr-headline">
-                                <td>Місто</td>
-                                <td>Будинок</td>
-                                <td>Поштовий індекс</td>
+                                <td><label for="mst">Місто</label></td>
+                                <td><label for="bud">Будинок</label></td>
+                                <td><label for="ind">Поштовий індекс</label></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" maxlength="30" class="input-text">
+                                    <input type="text" maxlength="30" class="input-text" id="mst">
                                 </td>
                                 <td>
-                                    <input type="text" maxlength="30" class="input-text">
+                                    <input type="text" maxlength="30" class="input-text" id="bud">
                                 </td>
                                 <td>
-                                    <input type="text" maxlength="30" class="input-text">
+                                    <input type="text" maxlength="30" class="input-text" id="ind">
                                 </td>
                             </tr>
                             <tr>
@@ -250,10 +250,10 @@
                         <h2>06. фіксована форма</h2>
                         <form action="index.html" method="post">
                             <div>
-                                <span class="tr-headline">Логін</span>
-                                <input type="text" maxlength="30" class="input-text mar">
-                                <span class="tr-headline">Пароль</span>
-                                <input type="password" maxlength="30" class="input-text">
+                                <span class="tr-headline"><label for="log">Логін</label></span>
+                                <input type="text" maxlength="30" class="input-text mar" id="log">
+                                <span class="tr-headline"><label for="fpas">Пароль</label></span>
+                                <input type="password" maxlength="30" class="input-text" id="fpas">
                                 <a href="index.html">Забули пароль?</a>
                                 <input type="checkbox" name="fixed-pasword" value="Запам’ятати пароль" class="input-checkbox" id="remember">
                                 <label for="remember">Запам’ятати пароль</label>
